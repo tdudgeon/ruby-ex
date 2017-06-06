@@ -13,7 +13,7 @@ These steps assume your OpenShift deployment has the default set of ImageStreams
 1. Fork a copy of [ruby-ex](https://github.com/openshift/ruby-ex)
 2. Add a Ruby application from your new repository:
 
-		$ oc new-app openshift/ruby-20-centos7~https://github.com/< yourusername >/ruby-ex 
+		$ oc new-app openshift/ruby-22-centos7~https://github.com/< yourusername >/ruby-ex 
 
 3. A build should start immediately.  To run another build, run:
 
@@ -56,6 +56,7 @@ In this case, the IP for ruby-ex is 172.30.97.209 and it is on port 8080.
 Review some of the common tips and suggestions [here](https://github.com/openshift/origin/blob/master/docs/debugging-openshift.md).
 
 ###Adding Webhooks and Making Code Changes
+
 Since OpenShift V3 does not provide a git repository out of the box, you can configure your github repository to make a webhook call whenever you push your code.
 
 1. From the console navigate to your project.  
@@ -66,4 +67,5 @@ Since OpenShift V3 does not provide a git repository out of the box, you can con
 6. After you save your webhook, if you refresh your settings page you can see the status of the ping that Github sent to OpenShift to verify it can reach the server.  
 
 ###License
+
 This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to [CC0](http://creativecommons.org/publicdomain/zero/1.0/).
